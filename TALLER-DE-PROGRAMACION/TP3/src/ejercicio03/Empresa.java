@@ -166,5 +166,12 @@ public class Empresa {
 
 	}
 		
+	public void mostrarProductos() {
+		
+		for (Producto producto : productos) {
+			System.out.println(producto.toString());
+		}
+		
+	}
 	
 }

@@ -20,8 +20,39 @@ public class Producto {
 		this.precio = precio;
 	}
 	
-	
-	
-	
+	protected String getMarca() {
+		return marca;
+	}
 
+	protected String getModelo() {
+		return modelo;
+	}
+
+	protected String getNroSerie() {
+		return nroSerie;
+	}
+
+	protected double getVoltaje() {
+		return voltaje;
+	}
+
+	protected boolean isEncendido() {
+		return isEncendido;
+	}
+
+	protected double getPrecio() {
+		return precio;
+	}
+	
+	protected String getSimple() {
+		String resultado = getClass().getSimpleName();
+		return resultado;
+	}
+	
+	@Override
+	public String toString() {
+		return getSimple() + " " + marca + ", modelo " + modelo;
+	}
+	
+	
 }

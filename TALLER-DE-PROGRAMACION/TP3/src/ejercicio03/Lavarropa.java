@@ -13,6 +13,13 @@ public class Lavarropa extends Producto {
 		this.maxCarga = maxCarga;
 		this.isAuto = isAuto;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Lavarropa []";
+	}
 	
 	
 	

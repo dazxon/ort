@@ -7,13 +7,11 @@ public class Test {
 
 		Empresa empresa = new Empresa();
 		
-		empresa.cargarProductos("Sanyo", null, null, 0, false, 0);
-		empresa.cargarProductos("Sanyo", null, null, 0, false, 0);
-		empresa.cargarProductos("Sanyo", null, null, 0, false, 0);
-		empresa.cargarProductos("Sanyo", null, null, 0, false, 0);
-		empresa.cargarProductos("Sanyo", null, null, 0, false, 0);
+		empresa.cargarProductos("Whirlpool", "H2745", null, 0, false, 14999);
+		empresa.cargarProductos("Philips", "49PGFS", null, 0, false, 14370);
+		empresa.cargarProductos("Drean", "CONCEPT 5.05", null, 0, false, 6799);
 		
-		
+		empresa.mostrarProductos();
 	}
 
 }
