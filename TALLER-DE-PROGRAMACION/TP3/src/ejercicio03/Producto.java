@@ -49,6 +49,12 @@ public class Producto {
 		return resultado;
 	}
 	
+	protected String getSuperString() {
+
+		return this.getSimple() + " " + getMarca() + ", modelo: " + getModelo();
+
+	}
+	
 	@Override
 	public String toString() {
 		return getSimple() + " " + marca + ", modelo " + modelo;

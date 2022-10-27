@@ -118,7 +118,7 @@ public class Empresa {
 					}
 					
 					
-				} while (mayorCero(potencia));
+				} while (!mayorCero(potencia));
 				
 				int cantVelocidades = 0;
 				
@@ -127,11 +127,11 @@ public class Empresa {
 					System.out.println("Indique cantidad de velocidades");
 					cantVelocidades = input.nextInt();
 							
-					if (mayorCero(cantVelocidades)) {
+					if (!mayorCero(cantVelocidades)) {
 						System.out.println("Cantidad de velocidades debe ser mayor a 0");
 					}
 					
-				} while (mayorCero(cantVelocidades));
+				} while (!mayorCero(cantVelocidades));
 				
 				producto = new Licuadora(marca, modelo, nroSerie, voltaje, isEncendido, precio, potencia, cantVelocidades);
 				
@@ -172,9 +172,10 @@ public class Empresa {
 		
 		Scanner input = new Scanner(System.in);
 				
+		double acumuladorTotal = 0;
+		
 		while (opcion != 0) {
 			
-			double acumuladorTotal = 0;
 			this.carrito = new ArrayList<>();
 						
 			System.out.println("Seleccione producto para agregar al carrito (0 para terminar)");
@@ -187,7 +188,7 @@ public class Empresa {
 				
 				Producto producto = this.productos.get(i);
 				
-				System.out.println(i+1 + ") " + producto);
+				System.out.println(i+1 + ") " + producto.getSuperString());
 				
 			}
 			
@@ -199,7 +200,7 @@ public class Empresa {
 				
 				Producto productoAux = this.productos.get(opcion - 1);
 				
-				System.out.println(productoAux.toString());
+				System.out.println(productoAux);
 				
 				System.out.println("Seleccione 1 para agregar al carrito, 2 para volver al menu anterior");
 				
@@ -208,6 +209,7 @@ public class Empresa {
 				if (opcion == 1) {
 					
 					this.carrito.add(productoAux);
+					acumuladorTotal += productoAux.getPrecio();
 					System.out.println("Producto agregado al carrito");
 					
 				}
