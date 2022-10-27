@@ -27,7 +27,7 @@ public class Televisor extends Producto {
 	@Override
 	public String toString() {
 		return getSimple() + " " + isFrostString(isSmart) + " " + getMarca() + " " + this.dimension + 
-				" pulgadas, modelo " + getModelo() + ": " +getPrecio();
+				" pulgadas, modelo " + getModelo() + ": $" +getPrecio();
 	}
 	
 	

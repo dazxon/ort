@@ -168,8 +168,54 @@ public class Empresa {
 		
 	public void mostrarProductos() {
 		
-		for (Producto producto : productos) {
-			System.out.println(producto.toString());
+		int opcion = 1;
+		
+		Scanner input = new Scanner(System.in);
+				
+		while (opcion != 0) {
+			
+			double acumuladorTotal = 0;
+			this.carrito = new ArrayList<>();
+						
+			System.out.println("Seleccione producto para agregar al carrito (0 para terminar)");
+			System.out.println("Productos en carrito: "+this.carrito.size());
+			System.out.println("Total: $"+acumuladorTotal);
+			
+			
+			//arreglar
+			for (int i = 0; i < this.productos.size(); i++) {
+				
+				Producto producto = this.productos.get(i);
+				
+				System.out.println(i+1 + ") " + producto);
+				
+			}
+			
+			opcion = input.nextInt();
+			
+			if (opcion != 0) {
+				
+				System.out.println("Elegiste " +opcion);
+				
+				Producto productoAux = this.productos.get(opcion - 1);
+				
+				System.out.println(productoAux.toString());
+				
+				System.out.println("Seleccione 1 para agregar al carrito, 2 para volver al menu anterior");
+				
+				opcion = input.nextInt();
+				
+				if (opcion == 1) {
+					
+					this.carrito.add(productoAux);
+					System.out.println("Producto agregado al carrito");
+					
+				}
+				
+			}else {
+				System.out.println("Total: $"+acumuladorTotal);
+			}
+			
 		}
 		
 	}

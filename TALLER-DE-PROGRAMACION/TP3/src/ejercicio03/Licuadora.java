@@ -14,4 +14,11 @@ public class Licuadora extends Producto {
 	}
 	
 	
+	@Override
+	public String toString() {
+
+		return getSimple() + " " + getMarca() + ", modelo " + getModelo() + ", cantidad velocidades " + this.cantVelocidades + ", potencia " + this.potencia +
+				" wats: $" + getPrecio();
+	}
+	
 }

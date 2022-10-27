@@ -14,11 +14,20 @@ public class Lavarropa extends Producto {
 		this.isAuto = isAuto;
 	}
 
-
+	private String isAutoString() {
+		String resultado = "semi automatico";
+		
+		if (isAuto) {
+			resultado = "Automatico";
+		}
+		
+		return resultado;
+	}
 
 	@Override
 	public String toString() {
-		return "Lavarropa []";
+		return getSimple() + " " + getMarca() + " " + isAutoString() + ", carga maxima " + this.maxCarga + "kg, modelo " +
+	getModelo() + ": $" + getPrecio();
 	}
 	
 	
